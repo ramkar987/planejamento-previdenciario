@@ -1,32 +1,31 @@
-# Escreva o seu código aqui :-)
-# Configuration file for Retirement Planning App
+from datetime import datetime
 
 APP_CONFIG = {
-    "app_name": "Planejamento Previdenciário",
-    "app_description": "Simulador inteligente para planejamento de aposentadoria",
-    "version": "1.0.0",
-    "author": "Seu Nome",
-    "email": "contato@planejamentoprevidenciario.com.br",
+    "app_name":    "PrevPlan | Planejamento Previdenciário",
+    "description": "Simulador inteligente para aposentadoria",
+    "version":     "1.0.0",
+    "email":       "contato@prevplan.com.br",
+    "whatsapp":    "5511999999999",
+    "year":        datetime.now().year,   # ← chave ausente que causava KeyError
 }
 
-# Default values
 DEFAULT_VALUES = {
-    "current_age": 35,
-    "retirement_age": 65,
-    "life_expectancy": 90,
-    "current_salary": 5000,
-    "current_savings": 50000,
-    "monthly_contribution": 1000,
-    "monthly_expenses": 3000,
-    "inflation_rate": 4.5,
-    "investment_return": 8.0,
+    "current_age":          35,
+    "retirement_age":       65,
+    "life_expectancy":      90,
+    "current_salary":       5_000,
+    "current_savings":      50_000,
+    "monthly_contribution": 1_000,
+    "monthly_expenses":     5_000,
+    "inflation_rate":       4.5,
+    "investment_return":    9.0,
 }
 
-# Color scheme
 COLORS = {
-    "primary": "#667eea",
+    "primary":   "#667eea",
     "secondary": "#764ba2",
-    "success": "#28a745",
-    "warning": "#ffc107",
-    "danger": "#dc3545",
+    "dark":      "#1e3c72",
+    "success":   "#4caf50",
+    "warning":   "#ffc107",
+    "danger":    "#c62828",
 }
